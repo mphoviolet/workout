@@ -36,3 +36,6 @@ mongoose.connect(process.env.MONGO_URL_ATLAS,{useNewUrlParser: true, useUnifiedT
     console.log(error)
 }
 )
+
+
+{/**MONGO_URL=mongodb://127.0.0.1:27017/mernapp**/}
