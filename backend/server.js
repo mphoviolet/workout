@@ -25,9 +25,10 @@ app.use((req, res, next) =>{
 app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
 
-mongoose.connect(process.env.MONGO_URL_ATLAS)
+mongoose.connect(process.env.MONGO_URL_ATLAS,{useNewUrlParser: true, useUnifiedTopology: true})
 .then(()=>{
     app.listen(process.env.PORT, ()=>{
+        
         console.log("listening to port",process.env.PORT)
     })
 })
