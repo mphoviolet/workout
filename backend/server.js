@@ -29,7 +29,7 @@ mongoose.connect(process.env.MONGO_URL_ATLAS,{useNewUrlParser: true, useUnifiedT
 .then(()=>{
     app.listen(process.env.PORT, ()=>{
         
-        console.log("listening to port",process.env.PORT)
+        console.log("listening to port  & mongodb connect",process.env.PORT)
     })
 })
 .catch((error)=>{
